@@ -1,0 +1,362 @@
+/* CRITICAL: Complete cursor reset for admin areas */
+/* This must override the global cursor: none !important rule */
+.admin-area,
+.admin-area *,
+.admin-area *::before,
+.admin-area *::after,
+.admin-area input,
+.admin-area textarea,
+.admin-area select,
+.admin-area button,
+.admin-area a,
+.admin-area div,
+.admin-area span,
+.admin-area p,
+.admin-area h1,
+.admin-area h2,
+.admin-area h3,
+.admin-area h4,
+.admin-area h5,
+.admin-area h6,
+.admin-area label,
+.admin-area form,
+.admin-area svg,
+.admin-area path {
+  cursor: auto !important;
+}
+
+/* Specific interactive elements get pointer cursor */
+.admin-area button,
+.admin-area button *,
+.admin-area a,
+.admin-area a *,
+.admin-area [role="button"],
+.admin-area [role="button"] *,
+.admin-area input[type="submit"],
+.admin-area input[type="button"],
+.admin-area .cursor-pointer,
+.admin-area .cursor-pointer * {
+  cursor: pointer !important;
+}
+
+/* Text inputs get text cursor */
+.admin-area input[type="text"],
+.admin-area input[type="email"],
+.admin-area input[type="password"],
+.admin-area input[type="number"],
+.admin-area input[type="search"],
+.admin-area input[type="url"],
+.admin-area input[type="tel"],
+.admin-area textarea,
+.admin-area [contenteditable="true"] {
+  cursor: text !important;
+}
+
+/* Additional Admin Panel Styles */
+
+/* Override global cursor hiding for admin areas - IMPORTANT FOR USABILITY */
+.admin-area,
+.admin-area *,
+.admin-area *::before,
+.admin-area *::after {
+  cursor: auto !important;
+}
+
+/* Specific cursor types for interactive elements with higher specificity */
+.admin-area input,
+.admin-area textarea,
+.admin-area select,
+.admin-area button,
+.admin-area a,
+.admin-area [role="button"],
+.admin-area .cursor-pointer,
+.admin-area button:hover,
+.admin-area button:focus,
+.admin-area a:hover,
+.admin-area a:focus {
+  cursor: pointer !important;
+}
+
+/* Text input cursor with higher specificity */
+.admin-area input[type="text"],
+.admin-area input[type="email"],
+.admin-area input[type="password"],
+.admin-area input[type="number"],
+.admin-area input[type="search"],
+.admin-area input[type="url"],
+.admin-area textarea,
+.admin-area [contenteditable="true"],
+.admin-area input:focus,
+.admin-area textarea:focus,
+.admin-area input:hover,
+.admin-area textarea:hover {
+  cursor: text !important;
+}
+
+/* Additional overrides for form elements */
+.admin-area form,
+.admin-area form *,
+.admin-area .form-control,
+.admin-area .form-input {
+  cursor: auto !important;
+}
+
+.admin-area form input,
+.admin-area form textarea,
+.admin-area form select,
+.admin-area form button {
+  cursor: text !important;
+}
+
+.admin-area form button,
+.admin-area form input[type="submit"],
+.admin-area form input[type="button"] {
+  cursor: pointer !important;
+}
+
+/* Monaco Editor cursor override */
+.admin-area .monaco-editor,
+.admin-area .monaco-editor *,
+.admin-area .monaco-editor .view-line,
+.admin-area .monaco-editor .monaco-cursor {
+  cursor: text !important;
+}
+
+/* Resize cursor for elements */
+.admin-area .resize-cursor {
+  cursor: resize !important;
+}
+
+/* Not allowed cursor for disabled elements */
+.admin-area :disabled,
+.admin-area [aria-disabled="true"] {
+  cursor: not-allowed !important;
+}
+
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
+
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+}
+
+/* Monaco Editor dark theme customization */
+.monaco-editor {
+  background-color: #0D0D0D !important;
+}
+
+.monaco-editor .margin {
+  background-color: #1A1A1A !important;
+}
+
+/* Custom scrollbar for admin panels */
+.admin-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.admin-scroll::-webkit-scrollbar-track {
+  background: #1A1A1A;
+}
+
+.admin-scroll::-webkit-scrollbar-thumb {
+  background: #00FFFF;
+  border-radius: 3px;
+}
+
+.admin-scroll::-webkit-scrollbar-thumb:hover {
+  background: #FF00FF;
+}
+
+/* React Quill editor customization */
+.ql-toolbar {
+  background-color: #1A1A1A !important;
+  border-color: #00FFFF33 !important;
+}
+
+.ql-container {
+  background-color: #0D0D0D !important;
+  border-color: #00FFFF33 !important;
+  color: white !important;
+}
+
+.ql-editor {
+  color: white !important;
+}
+
+.ql-editor.ql-blank::before {
+  color: #666 !important;
+}
+
+/* Form styling improvements */
+input[type="checkbox"]:checked {
+  background-color: #00FFFF !important;
+  border-color: #00FFFF !important;
+}
+
+select option {
+  background-color: #1A1A1A;
+  color: white;
+}
+
+/* Table improvements */
+table {
+  border-collapse: collapse;
+}
+
+/* Animation utilities */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+/* Loading states */
+.loading-shimmer {
+  background: linear-gradient(90deg, #1A1A1A 25%, #2A2A2A 50%, #1A1A1A 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Focus improvements */
+.focus-visible:focus {
+  outline: 2px solid #00FFFF;
+  outline-offset: 2px;
+}
+
+/* Prose content styling for blog preview */
+.prose-content h1,
+.prose-content h2,
+.prose-content h3,
+.prose-content h4,
+.prose-content h5,
+.prose-content h6 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+}
+
+.prose-content p {
+  margin-bottom: 1em;
+  line-height: 1.6;
+}
+
+.prose-content ul,
+.prose-content ol {
+  margin-bottom: 1em;
+  padding-left: 1.5em;
+}
+
+.prose-content li {
+  margin-bottom: 0.5em;
+}
+
+.prose-content pre {
+  margin: 1em 0;
+  overflow-x: auto;
+}
+
+.prose-content blockquote {
+  margin: 1em 0;
+  padding-left: 1em;
+}
+
+.prose-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+/* Additional robust cursor overrides for edge cases */
+html.admin-area,
+html.admin-area *,
+body.admin-area,
+body.admin-area *,
+#root .admin-area,
+#root .admin-area * {
+  cursor: auto !important;
+}
+
+/* Force cursor override on admin login specifically */
+.admin-area .admin-login,
+.admin-area .admin-login *,
+.admin-area .admin-login form,
+.admin-area .admin-login form * {
+  cursor: auto !important;
+}
+
+.admin-area .admin-login input,
+.admin-area .admin-login textarea,
+.admin-area .admin-login button {
+  cursor: text !important;
+}
+
+.admin-area .admin-login button,
+.admin-area .admin-login button * {
+  cursor: pointer !important;
+}
+
+/* Lucide icons cursor fix */
+.admin-area svg,
+.admin-area svg *,
+.admin-area .lucide,
+.admin-area .lucide * {
+  cursor: inherit !important;
+}
+
+/* Override any Tailwind cursor utilities in admin */
+.admin-area .cursor-none {
+  cursor: auto !important;
+}
+
+.admin-area .cursor-default {
+  cursor: auto !important;
+}
+
+/* SUPER CRITICAL: Force cursor on body when admin is active */
+body:has(.admin-area),
+html:has(.admin-area) {
+  cursor: auto !important;
+}
+
+body:has(.admin-area) *,
+html:has(.admin-area) * {
+  cursor: auto !important;
+}
+
+/* Backup for browsers that don't support :has() */
+body.admin-active,
+html.admin-active {
+  cursor: auto !important;
+}
+
+body.admin-active *,
+html.admin-active * {
+  cursor: auto !important;
+}
